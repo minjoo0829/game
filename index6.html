@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index 6</title>
+    <style>
+        /* 전체 페이지를 화면에 맞게 설정 */
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+        }
+
+        /* background_copy.jpg 이미지 스타일 */
+        #background {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 720px;
+            height: auto;
+        }
+
+        /* missing.jpg 이미지 스타일 */
+        #missing {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 230px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        /* humanrights.png 이미지 스타일 */
+        #humanrights {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 250px;
+            height: auto;
+            display: none; /* 초기에는 숨김 */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 배경 이미지 -->
+    <img src="background_copy.jpg" id="background" alt="Background">
+
+    <!-- missing.jpg 이미지 -->
+    <img src="missing.jpg" id="missing" alt="Missing Image">
+
+    <!-- humanrights.png 이미지 -->
+    <img src="humanrights.png" id="humanrights" alt="Human Rights">
+
+    <script>
+        // missing 이미지 클릭 시, humanrights 이미지로 변경
+        document.getElementById('missing').addEventListener('click', function() {
+            document.getElementById('missing').style.display = 'none'; // missing 이미지 숨기기
+            document.getElementById('humanrights').style.display = 'block'; // humanrights 이미지 보이기
+        });
+
+        // humanrights 이미지 클릭 시, index7.html로 이동
+        document.getElementById('humanrights').addEventListener('click', function() {
+            window.location.href = 'index7.html'; // index7.html로 이동
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+

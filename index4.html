@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index 4</title>
+  <link rel="stylesheet" href="styles.css"> <!-- 공통 CSS 파일 -->
+  <script src="script.js" defer></script>   <!-- 공통 JS 파일 -->
+  
+  <style>
+    /* 전체 레이아웃을 flexbox로 설정 */
+    .container {
+      display: flex;
+      flex-direction: column; /* 세로로 배치 */
+      align-items: center;    /* 중앙 정렬 */
+      justify-content: center; /* 세로 중앙 정렬 */
+      height: 100vh; /* 화면 전체 높이 */
+    }
+
+    /* SHOOT! 텍스트 스타일 */
+    .shoot-text {
+      font-size: 35px;  /* 텍스트 크기 */
+      font-family: Courier, serif;
+      font-weight: 800;
+      color: #950707;  /* 텍스트 색상 */
+      margin-top: 10px;  /* 이미지와 텍스트 사이의 간격 */
+    }
+
+    /* 이미지 클릭 가능 영역 */
+    .clickable-image {
+      max-width: 100%; /* 이미지 크기 조정 */
+      height: auto;
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="container">
+    <!-- protection__.gif 이미지, 클릭 시 index5.html로 이동 -->
+    <img src="protection__.gif" alt="Protection" class="clickable-image" id="protectionImage">
+    
+    <!-- SHOOT! 텍스트 -->
+    <div class="shoot-text">SHOOT!</div>
+  </div>
+
+  <script>
+    // protection__.gif 이미지를 클릭하면 index5.html로 이동
+    document.getElementById('protectionImage').addEventListener('click', function() {
+      window.location.href = 'index5.html';  // 페이지 이동
+    });
+  </script>
+
+</body>
+</html>
+
+
+

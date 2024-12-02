@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* body의 배경 이미지 스타일 */
+  body  {
+    background-image: url("game_start_background.jpg");
+    background-color: hsl(0, 0%, 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    height: 100vh; /* 페이지 전체 높이를 지정 */
+    margin: 0;
+    position: relative; /* 절대 위치 지정 시 기준이 될 부모 요소 */
+  }
+
+  /* 이미지를 배경 위에 배치하기 위한 스타일 */
+  .overlay-image {
+    position: absolute;
+    width: 200px; /* 이미지 크기 */
+    height: auto;
+    z-index: 10; /* 배경 이미지 위에 올리기 위해 */
+  }
+
+  /* 첫 번째 이미지 */
+  .image1 {
+    top: 750px; /* y 좌표 */
+    left: 720px; /* x 좌표 */
+    position: center;
+  }
+
+</style>
+</head>
+<body>
+
+  <!-- 이미지를 클릭하면 index2.html로 이동 -->
+  <a href="index2.html">
+    <img src="play2.gif" class="overlay-image image1" alt="play2.gif">
+  </a>
+
+</body>
+</html>
